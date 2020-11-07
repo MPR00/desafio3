@@ -1,6 +1,8 @@
+import { Assets } from '@react-navigation/stack';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { toUpperFirst } from '../util'
+import { toUpperFirst } from '../util';
+import iconSelect from '../assets/iconSelect.png';
 
 const PeopleListItem = props => {
     const { people, onPressItemDetails } = props
@@ -17,7 +19,9 @@ const PeopleListItem = props => {
                         } ${toUpperFirst(last)
                         }`}
                 </Text>
-                <Text style={style.icone} >icone</Text>
+
+                <Image style={style.icone} source={require('../assets/iconSelect.png')} />
+
             </View>
         </TouchableOpacity>
     )
@@ -51,9 +55,11 @@ const style = StyleSheet.create({
     },
 
     icone: {
-        color: 'rgb(27, 212, 171);',
-        marginRight: 10
-    }
+        marginRight: 10,
+        aspectRatio: 1,
+        borderRadius: 50,
+        flex: 1
+    },
 }
 )
 

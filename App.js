@@ -7,7 +7,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 import PeoplePage from './src/pages/PeoplePage'
 import PeopleDetailsPage from './src/pages/PeopleDetailsPage'
 
-//const stack = createStackNavigator();
+const stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function App(){
@@ -15,8 +15,8 @@ function App(){
     <View style={style.container}>
       <NavigationContainer>
         <Drawer.Navigator style={style.container} initialRouteName ="PeoplePage">
-          <Drawer.Screen style={style.container} name="Lista de Pessoas" component={PeoplePage} />
-          <Drawer.Screen style={style.container} name="Detalhe da Pessoa" component={PeopleDetailsPage} />
+          <Drawer.Screen style={style.container} name="Contatos" component={PeoplePage} />
+          <Drawer.Screen style={style.container} name="Informações do Contato" component={PeopleDetailsPage} />
         </Drawer.Navigator>
       </NavigationContainer>
     </View>

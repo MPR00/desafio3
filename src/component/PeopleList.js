@@ -22,7 +22,7 @@ const PeopleList = props => {
  
 const style = StyleSheet.create({
     container: {
-        paddingTop: 10,
+        paddingTop: 120,
         backgroundColor: 'rgb(28, 23, 46);'
     },
  

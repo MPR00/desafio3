@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import axios from 'axios';
 import PeopleList from '../component/PeopleList'
 
@@ -26,12 +26,14 @@ export default class PeoplePage extends React.Component{
  
   render(){
     return (
+      <ScrollView>
         <View>
             <PeopleList peoples={this.state.peoples}
             onPressItem={() => {
-              this.props.navigation.navigate('Detalhe da Pessoa')
+              this.props.navigation.navigate('Informações do Contato', {name: ''})
               }} /> 
         </View>
+        </ScrollView>
     );
   }
  

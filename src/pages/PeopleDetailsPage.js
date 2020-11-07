@@ -1,26 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Buttom, TouchableOpacity } from 'react-native';
+import { ScrollView ,StyleSheet, Text, View, Image, Alert, Button, TouchableOpacity } from 'react-native';
 import { toUpperFirst } from '../util'
-
 
 export default class PeopleDetailsPage extends React.Component {
 
   render() {
+    
     return (
+      <ScrollView>
       <View style={style.usuario}>
         <Text style={style.menu}>NAVEGAÇÃO </Text>
+        
         <Text style={style.imagem}>Imagem: </Text>
         <Text style={style.dados}>Nome: </Text>
         <Text style={style.dados}>Contato: </Text>
         <Text style={style.dados}>Endereço: </Text>
         <Text style={style.dados}>Escolaridade: </Text>
         <Text style={style.dados}>Data de nascimento: </Text>
-        <Text style={style.botao}>Voltar</Text>
-        <Buttom style={style.botao} 
-        title ='Voltar'
-        />
-      </View>
 
+        <View style={style.botao} >
+        <Button 
+          title = 'Voltar'
+          onPress = {() => this.props.navigation.navigate('Contatos')}
+        />
+        </View>
+
+      </View>
+      </ScrollView>
     )
   }
 }
@@ -44,14 +50,16 @@ const style = StyleSheet.create({
   },
 
   imagem: {
+    height: 250,
+    width: 250,
     marginTop: 40,
-    marginLeft: 60,
-    marginRight: 60,
+    marginLeft: 85,
+    marginRight: 80,
     marginBottom: 40,
     borderRadius: 600,
     backgroundColor: 'rgb(48, 40, 80)',
     aspectRatio: 1,
-    flex: 1,
+    alignItems: "center",
     textAlign: "center"
   },
 
@@ -77,15 +85,18 @@ const style = StyleSheet.create({
   },
 
   botao: {
-    width: 200,
-    height: 30,
     marginTop: 25,
     marginBottom: 40,
     marginLeft: 110,
-    marginRight: 110,
+    marginRight: 110
+  },
+
+  botaoInterno: {
+    width: 200,
+    height: 30,
     fontSize: 20,
-    borderRadius: 20,
     textAlign: "center",
+    borderRadius: 20,
     color:'rgb(28, 23, 46);',
     backgroundColor:  'rgb(27, 212, 171);'
   }
