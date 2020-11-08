@@ -14,8 +14,7 @@ export default class PeoplePage extends React.Component{
   }
  //http://demo5410349.mockable.io/pessoas/?nat=br&results=10
   componentDidMount(){
-    axios
-    .get('https://randomuser.me/api/?nat=br&results=20')
+    axios.get('http://demo8350856.mockable.io/ListaContato')
     .then(response => {
       const {results} = response.data
       this.setState({
@@ -30,7 +29,7 @@ export default class PeoplePage extends React.Component{
         <View>
             <PeopleList peoples={this.state.peoples}
             onPressItem={() => {
-              this.props.navigation.navigate('Informações do Contato', {name: ''})
+              this.props.navigation.navigate('Informações do Contato')
               }} /> 
         </View>
         </ScrollView>

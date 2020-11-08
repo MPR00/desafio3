@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {View, StyleSheet} from 'react-native'
+import {View, StyleSheet, Image} from 'react-native'
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import {createDrawerNavigator} from '@react-navigation/drawer'
@@ -14,9 +14,9 @@ function App(){
   return(
     <View style={style.container}>
       <NavigationContainer>
-        <Drawer.Navigator style={style.container} initialRouteName ="PeoplePage">
-          <Drawer.Screen style={style.container} name="Contatos" component={PeoplePage} />
-          <Drawer.Screen style={style.container} name="Informações do Contato" component={PeopleDetailsPage} />
+        <Drawer.Navigator initialRouteName ="PeoplePage">
+          <Drawer.Screen name="Contatos" component={PeoplePage} />
+          <Drawer.Screen name="Informações do Contato" component={PeopleDetailsPage} />
         </Drawer.Navigator>
       </NavigationContainer>
     </View>
@@ -27,7 +27,7 @@ const style = StyleSheet.create(
   {
     container:{
       flex:1,
-      backgroundColor:  'rgb(27, 212, 171);'
+
     }
   }
 )

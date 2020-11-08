@@ -5,20 +5,19 @@ import { toUpperFirst } from '../util';
 import iconSelect from '../assets/iconSelect.png';
 
 const PeopleListItem = props => {
-    const { people, onPressItemDetails } = props
-    const { title, first, last } = people.name
+    const {people, onPressItemDetails} = props
+    const {nameContact, phone, address, kinship, date } = people.listContact
+    
     return (
-        <TouchableOpacity  onPress={() => {
+        <TouchableOpacity onPress={() => {
             onPressItemDetails()
         }}>
-            <View style={style.line}>
-                <Image style={style.avatar} source={{ uri: people.picture.thumbnail }} />
-                <Text style={style.linetext} key={first}>
-                    {`${toUpperFirst(title)
-                        } ${toUpperFirst(first)
-                        } ${toUpperFirst(last)
-                        }`}
-                </Text>
+        <View style={style.line}>
+            <Image style={style.avatar} source={{uri: people.picture.thumbnail}}/>
+
+            <Text style={style.linetext} key={nameContact}>
+                {toUpperFirst(nameContact)}
+            </Text>  
 
                 <Image style={style.icone} source={require('../assets/iconSelect.png')} />
 

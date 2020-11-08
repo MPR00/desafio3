@@ -13,9 +13,9 @@ export default class PeopleDetailsPage extends React.Component {
         
         <Text style={style.imagem}>Imagem: </Text>
         <Text style={style.dados}>Nome: </Text>
-        <Text style={style.dados}>Contato: </Text>
+        <Text style={style.dados}>Numero: </Text>
         <Text style={style.dados}>Endereço: </Text>
-        <Text style={style.dados}>Escolaridade: </Text>
+        <Text style={style.dados}>Parentesco: </Text>
         <Text style={style.dados}>Data de nascimento: </Text>
 
         <View style={style.botao} >

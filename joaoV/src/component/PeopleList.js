@@ -7,19 +7,19 @@ const PeopleList = props => {
     const items = peoples.map(people => {
           return (
               <PeopleListItem 
-                    key={people.name.first} 
-                    people={people}
+                    key={people.listContact.nameContact} 
+                    people={people} 
                     onPressItemDetails={onPressItem}/>
           )
         }
       )
     return (
-        <View style={style.container}>
+        <View style={style.container}> 
             {items}
         </View>
     )
 }
- 
+
 const style = StyleSheet.create({
     container: {
         paddingTop: 120,
