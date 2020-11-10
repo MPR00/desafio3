@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native'
+import { View, StyleSheet, Image, Button } from 'react-native'
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem, } from '@react-navigation/drawer';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -19,7 +19,7 @@ const Tab = createMaterialBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Contatos"
       activeColor="#1bd4ab"
       inactiveColor="#504579"
       barStyle={{ backgroundColor: '#241d3e' }}
@@ -53,30 +53,29 @@ function App() {
   return (
     <View style={style.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="PeoplePage">
-          <Stack.Screen
-            name="Contact Book"
-            component={Tabs}
-            options={{
-              headerStyle: {
-                backgroundColor: 'rgb(27, 212, 171);'
-              },
-              headerTintColor: 'rgb(49, 42, 75);'
-            }}
+        <Drawer.Navigator
+          drawerContentOptions={{
+            activeTintColor: 'rgba(27, 212, 172, 0.804);',
+            activeBackgroundColor: '#241d3e',
+            inactiveTintColor: '#241d3e'
+          }}
+          drawerStyle={{
+            backgroundColor: ' rgba(27, 212, 172, 0.804);',
+            width: 240
+          }}
+          initialRouteName="PeoplePage">
 
+
+          <Drawer.Screen
+            name="Contatos"
+            component={Tabs}
           />
-          <Stack.Screen
+          <Drawer.Screen
             name="Informações do Contato"
             component={PeopleDetailsPage}
-            options={{
-              headerStyle: {
-                backgroundColor: 'rgb(27, 212, 171);'
-              },
-              headerTintColor: 'rgb(49, 42, 75);'
-            }}
           />
 
-        </Stack.Navigator>
+        </Drawer.Navigator>
       </NavigationContainer>
     </View>
   )

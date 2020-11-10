@@ -12,7 +12,7 @@ export default class PeoplePage extends React.Component {
       peoples: []
     }
   }
-  //https://api.tvmaze.com/search/shows?q=star%20wars
+
   componentDidMount() {
     axios.get('http://demo8350856.mockable.io/ListaContato')
       .then(response => {
