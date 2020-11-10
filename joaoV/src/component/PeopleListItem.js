@@ -5,19 +5,19 @@ import { toUpperFirst } from '../util';
 import iconSelect from '../assets/iconSelect.png';
 
 const PeopleListItem = props => {
-    const {people, onPressItemDetails} = props
-    const {nameContact, phone, address, kinship, date } = people.listContact
-    
+    const { people, onPressItemDetails } = props
+    const { nameContact, phone, address, kinship, date } = people.listContact
+
     return (
         <TouchableOpacity onPress={() => {
             onPressItemDetails()
         }}>
-        <View style={style.line}>
-            <Image style={style.avatar} source={{uri: people.picture.thumbnail}}/>
+            <View style={style.line}>
+                <Image style={style.avatar} source={{ uri: people.picture.thumbnail }} />
 
-            <Text style={style.linetext} key={nameContact}>
-                {toUpperFirst(nameContact)}
-            </Text>  
+                <Text style={style.linetext} key={nameContact}>
+                    {toUpperFirst(nameContact)}
+                </Text>
 
                 <Image style={style.icone} source={require('../assets/iconSelect.png')} />
 
@@ -30,11 +30,9 @@ const style = StyleSheet.create({
     line: {
         height: 60,
         borderBottomWidth: 1,
-        borderBottomColor:'rgb(49, 42, 75);',
-        borderTopWidth: 1,
-        borderTopColor:'rgb(49, 42, 75);',
+        borderBottomColor: 'rgb(49, 42, 75);',
         marginRight: 10,
-        marginLeft:10,
+        marginLeft: 10,
         alignItems: 'center',
         flexDirection: 'row',
     },
@@ -43,7 +41,7 @@ const style = StyleSheet.create({
         fontSize: 20,
         paddingLeft: 20,
         flex: 7,
-        color:'rgba(247, 247, 247, 0.891);'
+        color: 'rgba(247, 247, 247, 0.891);'
     },
 
     avatar: {
