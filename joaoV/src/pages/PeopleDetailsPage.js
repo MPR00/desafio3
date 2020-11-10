@@ -1,39 +1,36 @@
 import React from 'react';
-import { ScrollView ,StyleSheet, Text, View, Image, Alert, Button, TouchableOpacity } from 'react-native';
-import { toUpperFirst } from '../util'
+import { ScrollView, StyleSheet, Text, View, Image, Alert, Button, TouchableOpacity } from 'react-native';
+import { toUpperFirst } from '../util';
+import maleIcon1 from '../assets/maleIcon1.png';
 
 export default class PeopleDetailsPage extends React.Component {
 
   render() {
-    
-    return (
-      <ScrollView>
-      <View style={style.usuario}>
-        <Text style={style.menu}>NAVEGAÇÃO </Text>
-        
-        <Text style={style.imagem}>Imagem: </Text>
-        <Text style={style.dados}>Nome: </Text>
-        <Text style={style.dados}>Numero: </Text>
-        <Text style={style.dados}>Endereço: </Text>
-        <Text style={style.dados}>Parentesco: </Text>
-        <Text style={style.dados}>Data de nascimento: </Text>
 
+    return (
+      <View style={style.usuario}>
+        <Image style={style.imagem} source={require('../assets/maleIcon1.png')} />
+        <Text style={style.dados}>Nome: Lucas Almeida</Text>
+        <Text style={style.dados}>Numero: (71) 99290-3041</Text>
+        <Text style={style.dados}>Endereço: Avenida Paulo VI</Text>
+        <Text style={style.dados}>Parentesco: Irmão</Text>
+        <Text style={style.dados}>Data de nascimento: 11/09/2000</Text>
         <View style={style.botao} >
-        <Button 
-          title = 'Voltar'
-          onPress = {() => this.props.navigation.navigate('Contatos')}
-        />
+          <Button
+            title='Voltar'
+            color="rgb(27, 212, 171);"
+            onPress={() => this.props.navigation.navigate('Contatos')}
+          />
         </View>
 
       </View>
-      </ScrollView>
     )
   }
 }
 
 const style = StyleSheet.create({
   usuario: {
-    marginTop: 40,
+    marginTop: 0,
     width: 425,
     height: 820,
     backgroundColor: 'rgb(28, 23, 46);'
@@ -45,8 +42,8 @@ const style = StyleSheet.create({
     paddingTop: 15,
     fontSize: 15,
     textAlign: "center",
-    color:'rgb(28, 23, 46);',
-    backgroundColor:  'rgb(27, 212, 171);'
+    color: 'rgb(28, 23, 46);',
+    backgroundColor: 'rgb(27, 212, 171);'
   },
 
   imagem: {
@@ -57,10 +54,9 @@ const style = StyleSheet.create({
     marginRight: 80,
     marginBottom: 40,
     borderRadius: 600,
-    backgroundColor: 'rgb(48, 40, 80)',
+    backgroundColor: 'rgb(36, 29, 62)',
     aspectRatio: 1,
-    alignItems: "center",
-    textAlign: "center"
+    alignItems: "center"
   },
 
   dados: {
@@ -80,7 +76,7 @@ const style = StyleSheet.create({
     borderLeftWidth: 1,
     borderLeftColor: 'rgb(49, 42, 75);',
     borderRadius: 20,
-    color:'rgba(247, 247, 247, 0.891);',
+    color: 'rgba(247, 247, 247, 0.891);',
     backgroundColor: 'rgb(36, 29, 62)'
   },
 
@@ -89,17 +85,7 @@ const style = StyleSheet.create({
     marginBottom: 40,
     marginLeft: 110,
     marginRight: 110
-  },
-
-  botaoInterno: {
-    width: 200,
-    height: 30,
-    fontSize: 20,
-    textAlign: "center",
-    borderRadius: 20,
-    color:'rgb(28, 23, 46);',
-    backgroundColor:  'rgb(27, 212, 171);'
   }
-  
+
 }
 )
