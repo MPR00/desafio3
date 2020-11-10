@@ -4,7 +4,6 @@ import axios from 'axios';
 import PeopleList from '../component/PeopleList';
 
 
-
 export default class PeoplePage extends React.Component {
   constructor(props) {
     super(props);
@@ -27,9 +26,11 @@ export default class PeoplePage extends React.Component {
     return (
       <ScrollView>
         <View>
-          <PeopleList peoples={this.state.peoples}
+          <PeopleList 
+          peoples={this.state.peoples}
+          keyExtractor={info => info.phone}
             onPressItem={() => {
-              this.props.navigation.navigate('Informações do Contato', { nome: 'Carlos' })
+              this.props.navigation.navigate('Informações do Contato', { info })
             }} />
         </View>
       </ScrollView>

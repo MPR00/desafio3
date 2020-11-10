@@ -5,16 +5,48 @@ import maleIcon1 from '../assets/maleIcon1.png';
 
 export default class PeopleDetailsPage extends React.Component {
 
+  constructor(props) {
+    super(props)
+    const { info = {} } = props.route.params
+
+    this.state = {
+      info
+    }
+  }
+
+
   render() {
 
     return (
       <View style={style.usuario}>
-        <Image style={style.imagem} source={require('../assets/maleIcon1.png')} />
-        <Text style={style.dados}>Nome: Lucas Almeida</Text>
-        <Text style={style.dados}>Numero: (71) 99290-3041</Text>
-        <Text style={style.dados}>Endereço: Avenida Paulo VI</Text>
-        <Text style={style.dados}>Parentesco: Irmão</Text>
-        <Text style={style.dados}>Data de nascimento: 11/09/2000</Text>
+
+        <Image style={style.imagem} source={{ uri: this.state.info.picture.thumbnail }} />
+
+        <Text style={style.dados}>
+          <Text> Name: </Text>
+          {this.state.info.nameContact}
+        </Text>
+
+        <Text style={style.dados}>
+          <Text> Phone: </Text>
+          {this.state.info.phone}
+        </Text>
+
+        <Text style={style.dados}>
+          <Text> Adress: </Text>
+          {this.state.info.address}
+        </Text>
+
+        <Text style={style.dados}>
+          <Text> kinship:
+          </Text> {this.state.info.kinship}
+        </Text>
+
+        <Text style={style.dados}>
+          <Text> date: </Text>
+          {this.state.info.date}
+        </Text>
+
         <View style={style.botao} >
           <Button
             title='Voltar'

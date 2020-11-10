@@ -17,6 +17,7 @@ const PeopleListItem = props => {
 
                 <Text style={style.linetext} key={nameContact}>
                     {toUpperFirst(nameContact)}
+                    {toUpperFirst(phone)}
                 </Text>
 
                 <Image style={style.icone} source={require('../assets/iconSelect.png')} />
