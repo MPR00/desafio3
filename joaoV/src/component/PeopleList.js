@@ -9,7 +9,7 @@ const PeopleList = props => {
             <PeopleListItem
                 key={people.listContact.nameContact}
                 people={people}
-                onPressItemDetails={onPressItem} />
+                onPressItemDetails={event => onPressItem(people)} />
         )
     }
     )

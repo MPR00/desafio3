@@ -8,61 +8,61 @@ export default class PeopleDetailsPage extends React.Component {
   constructor(props) {
     super(props)
     const { info = {} } = props.route.params
-
+    console.log(info)
     this.state = {
-      info
+      error: null,
+      refreshing: false,
+      info: info || {}
     }
   }
-
 
   render() {
 
     return (
-      <View style={style.usuario}>
+        <View style={style.usuario}>
 
-        <Image style={style.imagem} source={{ uri: this.state.info.picture.thumbnail }} />
+          <Image style={style.imagem} source={{ uri: this.state.info.photo}} />
 
-        <Text style={style.dados}>
-          <Text> Name: </Text>
-          {this.state.info.nameContact}
-        </Text>
+          <Text style={style.dados}>
+            <Text> Nome: </Text>
+            {this.state.info.listContact.nameContact}
+          </Text>
 
-        <Text style={style.dados}>
-          <Text> Phone: </Text>
-          {this.state.info.phone}
-        </Text>
+          <Text style={style.dados}>
+            <Text> Telefone: </Text>
+            {this.state.info.listContact.phone}
+          </Text>
 
-        <Text style={style.dados}>
-          <Text> Adress: </Text>
-          {this.state.info.address}
-        </Text>
+          <Text style={style.dados}>
+            <Text> Endereço: </Text>
+            {this.state.info.listContact.address}
+          </Text>
 
-        <Text style={style.dados}>
-          <Text> kinship:
-          </Text> {this.state.info.kinship}
-        </Text>
+          <Text style={style.dados}>
+            <Text> Parentesco:
+          </Text> {this.state.info.listContact.kinship}
+          </Text>
 
-        <Text style={style.dados}>
-          <Text> date: </Text>
-          {this.state.info.date}
-        </Text>
+          <Text style={style.dados}>
+            <Text> Data de nascimento: </Text>
+            {this.state.info.listContact.date}
+          </Text>
 
-        <View style={style.botao} >
-          <Button
-            title='Voltar'
-            color="rgb(27, 212, 171);"
-            onPress={() => this.props.navigation.navigate('Contatos')}
-          />
+          <View style={style.botao} >
+            <Button
+              title='Voltar'
+              color="rgb(27, 212, 171);"
+              onPress={() => this.props.navigation.navigate('Contatos')}
+            />
+          </View>
+
         </View>
-
-      </View>
     )
   }
 }
 
 const style = StyleSheet.create({
   usuario: {
-    marginTop: 0,
     width: 425,
     height: 820,
     backgroundColor: 'rgb(28, 23, 46);'
@@ -113,7 +113,7 @@ const style = StyleSheet.create({
   },
 
   botao: {
-    marginTop: 25,
+    marginTop: 15,
     marginBottom: 40,
     marginLeft: 110,
     marginRight: 110

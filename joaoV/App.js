@@ -11,6 +11,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import PeoplePage from './src/pages/PeoplePage';
 import PeopleDetailsPage from './src/pages/PeopleDetailsPage';
+import { Icon } from "react-native-elements";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -28,7 +29,7 @@ function Tabs() {
         name="Contatos"
         component={PeoplePage}
         options={{
-          tabBarLabel: 'Contact List',
+          tabBarLabel: 'Lista de contatos',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account-multiple" color={color} size={26} />
           ),
@@ -39,7 +40,7 @@ function Tabs() {
         name="Informações do Contato"
         component={PeopleDetailsPage}
         options={{
-          tabBarLabel: 'Contact',
+          tabBarLabel: 'Contato',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account-details" color={color} size={26} />
           ),
@@ -51,31 +52,43 @@ function Tabs() {
 
 function App() {
   return (
-    <View style={style.container}>
+    <View style={style.container} >
       <NavigationContainer>
-        <Drawer.Navigator
-          drawerContentOptions={{
-            activeTintColor: 'rgba(27, 212, 172, 0.804);',
-            activeBackgroundColor: '#241d3e',
-            inactiveTintColor: '#241d3e'
-          }}
-          drawerStyle={{
-            backgroundColor: ' rgba(27, 212, 172, 0.804);',
-            width: 240
-          }}
-          initialRouteName="PeoplePage">
+        <Stack.Navigator initialRouteName="Contatos">
 
-
-          <Drawer.Screen
-            name="Contatos"
+          <Stack.Screen
+            name="Agenda"
             component={Tabs}
-          />
-          <Drawer.Screen
-            name="Informações do Contato"
-            component={PeopleDetailsPage}
+            options={{
+              headerStyle: {
+                backgroundColor: 'rgb(36, 29, 62);'
+              },
+              headerTintColor: 'rgba(27, 212, 172, 0.804);',
+              headerTitleAlign: 'center',
+              textAlignmentsVertical: 'center',
+              headerLeft: () => (
+                <Icon
+                  onPress={() => this.props.navigation.openDrawer()}
+                  name="menu"
+                  style={{ marginLeft: 20 }}
+                  color="#000000"
+                />
+              ),
+            }}
           />
 
-        </Drawer.Navigator>
+          <Stack.Screen name="Informações do Contato"
+            component={PeopleDetailsPage} options={{
+              headerStyle: {
+                backgroundColor: 'rgb(36, 29, 62);'
+              },
+              headerTintColor: 'rgba(27, 212, 172, 0.804);',
+              headerTitleAlign: 'center',
+              textAlignmentsVertical: 'center',
+            }}
+          />
+
+        </Stack.Navigator>
       </NavigationContainer>
     </View>
   )

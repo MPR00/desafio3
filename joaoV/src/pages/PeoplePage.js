@@ -28,8 +28,9 @@ export default class PeoplePage extends React.Component {
         <View>
           <PeopleList 
           peoples={this.state.peoples}
-          keyExtractor={info => info.phone}
-            onPressItem={() => {
+          keyExtractor={info => info.nameContact}
+            onPressItem={(info) => {
+              refreshing: true,
               this.props.navigation.navigate('Informações do Contato', { info })
             }} />
         </View>

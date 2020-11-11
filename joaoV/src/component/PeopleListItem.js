@@ -13,11 +13,10 @@ const PeopleListItem = props => {
             onPressItemDetails()
         }}>
             <View style={style.line}>
-                <Image style={style.avatar} source={{ uri: people.picture.thumbnail }} />
+                <Image style={style.avatar} source={{ uri: people.photo}} />
 
                 <Text style={style.linetext} key={nameContact}>
                     {toUpperFirst(nameContact)}
-                    {toUpperFirst(phone)}
                 </Text>
 
                 <Image style={style.icone} source={require('../assets/iconSelect.png')} />
