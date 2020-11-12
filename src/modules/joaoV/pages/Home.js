@@ -70,7 +70,7 @@ class Home extends React.Component {
                 <Icon
                   onPress={() => this.props.navigation.openDrawer()}
                   name="menu"
-                  style={{ marginLeft: 20 }}
+                  containerStyle={{ marginLeft: 10 }}
                   color="#000000"
                 />
               ),

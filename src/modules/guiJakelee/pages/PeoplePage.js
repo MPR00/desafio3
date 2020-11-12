@@ -27,8 +27,7 @@ export default class PeoplePage extends React.Component {
           <PeopleList peoples={this.state.peoples}
             keyExtractor={info => info.contato}
             onPressItem={(info) => {
-              refreshing: true,
-                this.props.navigation.navigate('Detalhe da Pessoa', { info })
+              this.props.navigation.navigate('Detalhe da Pessoa', { info })
             }} />
         </View>
       </ScrollView>

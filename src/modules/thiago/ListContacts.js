@@ -2,7 +2,7 @@ import React from "react";
 import { View, FlatList } from "react-native";
 import { ListItem, Avatar } from "react-native-elements";
 
-class List extends React.Component {
+class ListContacts extends React.Component {
   constructor(props) {
     super(props);
 
@@ -44,7 +44,7 @@ class List extends React.Component {
   };
 
   clickRow (event, item) {
-    this.props.navigation.navigate('Detalhes', { item })
+    this.props.navigation.navigate('ContactDetails', { item })
   }
 
   render() {
@@ -68,4 +68,4 @@ class List extends React.Component {
   }
 }
 
-export default List;
+export default ListContacts;

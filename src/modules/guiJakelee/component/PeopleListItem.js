@@ -7,7 +7,7 @@ const PeopleListItem = props => {
   const { contato, celular } = people.contact //vai pegar esses dados da api
   return (
     <TouchableOpacity onPress={() => {
-      onPressItemDetails()
+      onPressItemDetails(people)
     }}>
 
       <View style={style.line}>

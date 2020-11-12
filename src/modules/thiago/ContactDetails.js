@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Card } from 'react-native-elements'
 
-class Details extends Component {
+class ContactDetails extends Component {
   constructor (props) {
     super(props)
     const { item = {} } = props.route.params
@@ -48,4 +48,4 @@ class Details extends Component {
   }
 }
 
-export default Details;
+export default ContactDetails;

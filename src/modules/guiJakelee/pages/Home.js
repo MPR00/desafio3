@@ -54,19 +54,19 @@ class Home extends React.Component {
       <Stack.Navigator initialRouteName="Lista">
         <Stack.Screen
           name="Lista"
-          component={Tabs}
+          component={PeoplePage}
           options={{
             headerLeft: () => (
               <Icon
                 onPress={() => this.props.navigation.openDrawer()}
                 name="menu"
-                style={{ marginLeft: 20 }}
+                containerStyle={{ marginLeft: 10 }}
                 color="#fff"
               />
             ),
           }}
         />
-        <Stack.Screen name="Detalhes" component={PeopleDetailsPage} />
+        <Stack.Screen name="Detalhe da Pessoa" component={PeopleDetailsPage} />
       </Stack.Navigator>
     </NavigationContainer>
     );

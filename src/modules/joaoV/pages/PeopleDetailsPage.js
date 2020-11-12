@@ -2,9 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default class PeopleDetailsPage extends React.Component {
+  constructor (props) {
+    super(props)
+  }
 
   render() {
-
     return (
       <View style={style.usuario}>
         <Image style={style.imagem} source={require('../assets/maleIcon1.png')} />
@@ -20,7 +22,6 @@ export default class PeopleDetailsPage extends React.Component {
             onPress={() => this.props.navigation.navigate('Contatos')}
           />
         </View>
-
       </View>
     )
   }

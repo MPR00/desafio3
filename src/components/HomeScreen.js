@@ -18,12 +18,12 @@ class HomeScreen extends React.Component {
         <Button
           title='Guijakelee'
           buttonStyle={{ marginBottom: 20, padding: 50 }}
-          onPress={(event) => this.props.navigation.navigate('GuiJakelee')}>
+          onPress={(event) => this.props.navigation.navigate('Guilherme')}>
         </Button>
         <Button
           title='joaoV'
           buttonStyle={{ marginBottom: 20, padding: 50 }}
-          onPress={(event) => this.props.navigation.navigate('JoaoV')}>
+          onPress={(event) => this.props.navigation.navigate('Joao Victor')}>
         </Button>
         <Button
           title='Vinicius'
@@ -41,7 +41,7 @@ class HomeScreen extends React.Component {
           placement="left"
           backgroundColor="rgb(18, 18, 18)"
           barStyle="dark-content"
-          containerStyle={{ height: 64, fontSize: 18, borderBottomColor: "rgb(39, 39, 41)" }}
+          containerStyle={{ height: 80, fontSize: 18, marginLeft: 10, borderBottomColor: "rgb(39, 39, 41)" }}
           leftComponent={{ icon: 'menu', color: '#fff', onPress: this.props.navigation.openDrawer }}
           centerComponent={{ text: 'Início', style: { color: '#fff' } }}
         />

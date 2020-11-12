@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default class PeopleDetailsPage extends React.Component {
 
@@ -8,9 +8,7 @@ export default class PeopleDetailsPage extends React.Component {
     const { info = {} } = props.route.params
 
     this.state = {
-      error: null,
-      refreshing: false,
-      info: info || {}
+      info
     }
   }
 
@@ -65,6 +63,7 @@ const style = StyleSheet.create({ //add o css aki
   usuario: {
     marginTop: 0,
     height: '100%',
+    width: '100%',
     backgroundColor: 'rgb(255, 255, 255);'
   },
   menu: {
@@ -87,6 +86,8 @@ const style = StyleSheet.create({ //add o css aki
     borderRadius: 50
   },
   imagem: {
+    display: 'flex',
+    flex: 1,
     height: 250,
     width: 250,
     marginTop: 40,
@@ -95,8 +96,8 @@ const style = StyleSheet.create({ //add o css aki
     borderRadius: 600,
     backgroundColor: 'rgb(45, 52, 50)',
     aspectRatio: 1,
-    alignItems: "center",
-    margin: "0 auto"
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   infos: {
     fontSize: 15,

@@ -1,8 +1,8 @@
 import React from "react";
 import { NavigationContainer, DarkTheme  } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import CompanieDetails from './Details'
-import CompanieList from './List'
+import CompanieDetails from './ContactDetails'
+import CompanieList from './ListContacts'
 import { Icon } from "react-native-elements";
 
 const Stack = createStackNavigator()
@@ -24,13 +24,13 @@ class Home extends React.Component {
                 <Icon
                   onPress={() => this.props.navigation.openDrawer()}
                   name="menu"
-                  style={{ marginLeft: 20 }}
+                  containerStyle={{ marginLeft: 10 }}
                   color="#fff"
                 />
               ),
             }}
           />
-          <Stack.Screen name="Detalhes" component={CompanieDetails} />
+          <Stack.Screen name="ContactDetails" component={CompanieDetails} />
         </Stack.Navigator>
       </NavigationContainer>
     );
