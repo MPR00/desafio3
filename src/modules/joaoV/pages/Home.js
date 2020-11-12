@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavigationContainer, DarkTheme  } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -58,7 +57,7 @@ class Home extends React.Component {
 
           <Stack.Screen
             name="Agenda"
-            component={Tabs}
+            component={PeoplePage}
             options={{
               headerStyle: {
                 backgroundColor: 'rgb(36, 29, 62);'

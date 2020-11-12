@@ -10,39 +10,6 @@ import { Icon } from "react-native-elements";
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator()
 
-function Tabs() {
-  return (
-    <Tab.Navigator
-      initialRouteName="Contatos"
-      activeColor="#000" //fonte
-      inactiveColor="#404040" //butão nav
-      barStyle={{ backgroundColor: 'rgb(89, 89, 89)' }}//butão nav
-    >
-      <Tab.Screen
-        name="Contatos"
-        component={PeoplePage}
-        options={{
-          tabBarLabel: 'Contados Empresariais',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account-multiple" color={color} size={26} />
-          ),
-        }}
-      />
-
-      <Tab.Screen
-        name="Detalhe da Pessoa"
-        component={PeopleDetailsPage}
-        options={{
-          tabBarLabel: 'Detalhes dos Contatos',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account-details" color={color} size={26} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  )
-}
-
 class Home extends React.Component {
   constructor (props) {
     super(props)

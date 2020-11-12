@@ -26,8 +26,8 @@ export default class PeoplePage extends React.Component {
       <ScrollView>
         <View>
           <PeopleList peoples={this.state.peoples}
-            onPressItem={() => {
-              this.props.navigation.navigate('Informações do Contato', { nome: 'Carlos' })
+            onPressItem={(info) => {
+              this.props.navigation.navigate('Informações do Contato', { info })
             }} />
         </View>
       </ScrollView>
