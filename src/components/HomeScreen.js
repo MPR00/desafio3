@@ -18,12 +18,12 @@ class HomeScreen extends React.Component {
         <Button
           title='Guijakelee'
           buttonStyle={{ marginBottom: 20, padding: 50 }}
-          onPress={(event) => this.props.navigation.navigate('Guilherme')}>
+          onPress={(event) => this.props.navigation.navigate('Guijakelee')}>
         </Button>
         <Button
           title='joaoV'
           buttonStyle={{ marginBottom: 20, padding: 50 }}
-          onPress={(event) => this.props.navigation.navigate('Joao Victor')}>
+          onPress={(event) => this.props.navigation.navigate('JoaoV')}>
         </Button>
         <Button
           title='Vinicius'
