@@ -6,13 +6,13 @@ const PeopleList = props => {
     const {peoples, onPressItem} = props
     const items = peoples.map(people => {
           return (
-              <PeopleListItem 
-                    key={people.nome.contato} 
-                    people={people} 
-                    onPressItemDetails={onPressItem}/>
+          <PeopleListItem 
+          key={people.contact.contato}
+          people={people} 
+          onPressItemDetails={event => onPressItem(people)} />
           )
         }
-      )
+        )
     return (
         <View style={style.container}> 
             {items}
@@ -20,10 +20,10 @@ const PeopleList = props => {
     )
 }
  
-const style = StyleSheet.create({ //add o css aki
+const style = StyleSheet.create({
     container: {
-        backgroundColor: '#e2f977'
-        
+        paddingTop: 40,
+        backgroundColor: 'rgb(191, 191, 191);'
     },
 }
 )

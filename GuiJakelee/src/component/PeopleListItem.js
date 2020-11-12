@@ -4,19 +4,22 @@ import {toUpperContato} from '../util' //pega a primeira string e coloca maiuscu
  
 const PeopleListItem = props => {
     const {people, onPressItemDetails} = props
-    const {empresa_nome, contato, celular} = people.nome //vai pegar esses dados da api
+    const {contato, celular} = people.contact //vai pegar esses dados da api
     return (
         <TouchableOpacity onPress={() => {
             onPressItemDetails()
         }}>
+       
         <View style={style.line}>
-            <Image style={style.avatar} source={{uri: people.picture.thumbnail}}/>
+            <Image style={style.avatar} source={{uri: people.fotografia}}/>
+
             <Text style={style.linetext} key={contato}>
-                {`
-                ${toUpperContato(contato)}
-                `}
+            
+                {toUpperContato(contato)}
+            
             </Text>            
         </View>
+        
         </TouchableOpacity>
     )
 }
@@ -25,21 +28,35 @@ const style = StyleSheet.create({ //add o css aki
     line: {
         height: 60,
         borderBottomWidth: 1,
-        borderBottomColor: '#bbb',
+        borderBottomColor:'rgb(0, 0, 0);',
+        borderTopWidth: 1,
+        borderTopColor:'rgb(0, 0, 0);',
+        marginRight: 10,
+        marginLeft:10,
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
-    linetext:{
-        fontSize:20,
+
+    linetext: {
+        fontSize: 20,
         paddingLeft: 20,
-        flex: 7
+        flex: 7,
+        color:'rgb(0, 0, 0);'
     },
-    avatar:{
+
+    avatar: {
         aspectRatio: 1,
         flex: 1,
         marginLeft: 10,
         borderRadius: 50
-    }
+    },
+
+    icone: {
+        marginRight: 10,
+        aspectRatio: 1,
+        borderRadius: 50,
+        flex: 1
+    },
 }
 )
  
