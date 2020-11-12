@@ -16,7 +16,15 @@ export default function App() {
         initialRouteName="Início"
         drawerContentOptions={{
           itemStyle: { borderRadius: 0 },
+          activeTintColor: 'rgba(27, 212, 172, 0.804);',
+          activeBackgroundColor: '#241d3e',
+          inactiveTintColor: '#241d3e'
+        }}
+        drawerStyle={{
+          backgroundColor: ' rgba(27, 212, 172, 0.804);',
+          width: 240
         }}>
+
         <Drawer.Screen name="Início" component={HomeScreen} />
         <Drawer.Screen name="Thiago" options={{ drawerLabel: 'Thiago Nogueira' }} component={PeoplePageThiago} />
         <Drawer.Screen name="GuiJakelee" options={{ drawerLabel: 'GuiJakelee' }} component={PeoplePageJakeLee} />

@@ -63,7 +63,6 @@ export default class PeopleDetailsPage extends React.Component {
 
 const style = StyleSheet.create({
   usuario: {
-    height: '100%',
     backgroundColor: 'rgb(28, 23, 46);'
   },
 

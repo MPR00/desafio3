@@ -7,27 +7,27 @@ class HomeScreen extends React.Component {
     super(props)
   }
 
-  renderMenu () {
+  renderMenu() {
     return (
-      <View style={{ padding: 10 }}>
+      <View style={{ padding: 10, backgroundColor: 'rgb(28, 23, 46);', height: 900 }}>
         <Button
           title='Thiago Nogueira de Carvalho'
-          buttonStyle={{ marginBottom: 20, padding: 50 }}
+          buttonStyle={{ marginTop: 20, marginBottom: 20, padding: 50, backgroundColor: "rgb(36, 29, 62);" }}
           onPress={(event) => this.props.navigation.navigate('Thiago')}>
         </Button>
         <Button
           title='Guijakelee'
-          buttonStyle={{ marginBottom: 20, padding: 50 }}
+          buttonStyle={{ marginBottom: 20, padding: 50, backgroundColor: "rgb(36, 29, 62);" }}
           onPress={(event) => this.props.navigation.navigate('GuiJakelee')}>
         </Button>
         <Button
           title='joaoV'
-          buttonStyle={{ marginBottom: 20, padding: 50 }}
+          buttonStyle={{ marginBottom: 20, padding: 50, backgroundColor: "rgb(36, 29, 62);" }}
           onPress={(event) => this.props.navigation.navigate('JoaoV')}>
         </Button>
         <Button
           title='Vinicius'
-          buttonStyle={{ marginBottom: 20, padding: 50 }}
+          buttonStyle={{ marginBottom: 20, padding: 50, backgroundColor: "rgb(36, 29, 62);" }}
           onPress={(event) => this.props.navigation.navigate('Vinicius')}>
         </Button>
       </View>
@@ -39,11 +39,26 @@ class HomeScreen extends React.Component {
       <View style={{ height: 64 }}>
         <Header
           placement="left"
-          backgroundColor="rgb(18, 18, 18)"
+          backgroundColor="rgb(36, 29, 62);"
           barStyle="dark-content"
-          containerStyle={{ height: 80, fontSize: 18, marginLeft: 10, borderBottomColor: "rgb(39, 39, 41)" }}
-          leftComponent={{ icon: 'menu', color: '#fff', onPress: this.props.navigation.openDrawer }}
-          centerComponent={{ text: 'Início', style: { color: '#fff' } }}
+          containerStyle={{
+            height:90,
+            fontSize: 40,
+            marginTop: 10,
+            borderBottomColor:
+              "rgb(39, 39, 41)",
+            shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 7,
+            },
+            shadowOpacity: 0.43,
+            shadowRadius: 9.51,
+            elevation: 15,
+          }}
+          leftComponent={{ icon: 'menu', color: '#1bd4accd', onPress: this.props.navigation.openDrawer }}
+          centerComponent={{ text: 'Início', style: { color: '#1bd4accd' } }}
+          placement="center"
         />
 
         {this.renderMenu()}
