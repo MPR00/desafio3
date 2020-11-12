@@ -12,22 +12,22 @@ class HomeScreen extends React.Component {
       <View style={{ padding: 10 }}>
         <Button
           title='Thiago Nogueira de Carvalho'
-          style={{ marginBottom: 10 }}
+          buttonStyle={{ marginBottom: 20, padding: 50 }}
           onPress={(event) => this.props.navigation.navigate('Thiago')}>
         </Button>
         <Button
           title='Guijakelee'
-          style={{ marginBottom: 10 }}
+          buttonStyle={{ marginBottom: 20, padding: 50 }}
           onPress={(event) => this.props.navigation.navigate('GuiJakelee')}>
         </Button>
         <Button
           title='joaoV'
-          style={{ marginBottom: 10 }}
+          buttonStyle={{ marginBottom: 20, padding: 50 }}
           onPress={(event) => this.props.navigation.navigate('JoaoV')}>
         </Button>
         <Button
           title='Vinicius'
-          style={{ marginBottom: 10 }}
+          buttonStyle={{ marginBottom: 20, padding: 50 }}
           onPress={(event) => this.props.navigation.navigate('Vinicius')}>
         </Button>
       </View>

@@ -5,7 +5,7 @@ import HomeScreen from './src/components/HomeScreen'
 import PeoplePageThiago from './src/modules/thiago/Home'
 // import PeoplePageVinicius from './src/modules/vinicius/Home'
 import PeoplePageJakeLee from './src/modules/guiJakelee/pages/Home'
-import PeoplePageJoaoV from './src/modules/JoaoV/pages/Home'
+import PeoplePageJoaoV from './src/modules/joaoV/pages/Home'
 
 const Drawer = createDrawerNavigator();
 

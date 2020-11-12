@@ -6,7 +6,7 @@ export default class PeopleDetailsPage extends React.Component {
   constructor(props) {
     super(props)
     const { info = {} } = props.route.params
-    console.log(info)
+
     this.state = {
       error: null,
       refreshing: false,
