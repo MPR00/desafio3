@@ -3,8 +3,6 @@ import { View, ScrollView } from 'react-native';
 import axios from 'axios';
 import PeopleList from '../component/PeopleList';
 
-
-
 export default class PeoplePage extends React.Component {
   constructor(props) {
     super(props);

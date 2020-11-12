@@ -1,8 +1,6 @@
-import { Assets } from '@react-navigation/stack';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { toUpperFirst } from '../util';
-import iconSelect from '../assets/iconSelect.png';
 
 const PeopleListItem = props => {
     const { people = {}, onPressItemDetails } = props
