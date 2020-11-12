@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
 
 export default class PeopleDetailsPage extends React.Component {
 
@@ -14,39 +14,41 @@ export default class PeopleDetailsPage extends React.Component {
 
   render() {
     return (
+      <ScrollView>
       <View style={style.usuario}>
 
         <Image style={style.imagem} source={{ uri: this.state.info.fotografia }} />
 
         <Text style={style.infos}>
-          <Text> Nome da Proprietário:</Text>
+          <Text> Nome: </Text>
           {this.state.info.contact.contato}
         </Text>
         <Text style={style.infos}>
-          <Text> Nome da Empresa:</Text>
+          <Text> Nome da Empresa: </Text>
           {this.state.info.contact.empresa_nome}
         </Text>
         <Text style={style.infos}>
-          <Text> Fornecedor Grupo:</Text>
+          <Text> Fornecedor Grupo: </Text>
           {this.state.info.contact.grupo_nome}
         </Text>
         <Text style={style.infos}>
-          <Text> Tel.:</Text>
+          <Text> Tel.: </Text>
           {this.state.info.contact.celular}
         </Text>
         <Text style={style.infos}>
-          <Text> Email:</Text>
+          <Text> Email: </Text>
           {this.state.info.contact.email}
         </Text>
         <Text style={style.infos}>
-          <Text> Cidade:</Text>
+          <Text> Cidade: </Text>
           {this.state.info.contact.cidade}
         </Text>
         <Text style={style.infos}>
-          <Text> Estado:</Text>
+          <Text> Estado: </Text>
           {this.state.info.contact.estado}
         </Text>
       </View>
+      </ScrollView>
     )
   }
 
@@ -86,18 +88,16 @@ const style = StyleSheet.create({ //add o css aki
     borderRadius: 50
   },
   imagem: {
-    display: 'flex',
-    flex: 1,
     height: 250,
     width: 250,
     marginTop: 40,
-    marginHorizontal: 'auto',
+    marginLeft: 53,
+    marginRight: 80,
     marginBottom: 40,
     borderRadius: 600,
-    backgroundColor: 'rgb(45, 52, 50)',
+    backgroundColor: 'rgb(36, 29, 62)',
     aspectRatio: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center"
   },
   infos: {
     fontSize: 15,
