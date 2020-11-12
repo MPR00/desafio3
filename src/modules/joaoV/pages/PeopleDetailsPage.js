@@ -52,7 +52,7 @@ export default class PeopleDetailsPage extends React.Component {
           <Button
             title='Voltar'
             color="rgb(27, 212, 171);"
-            onPress={() => this.props.navigation.navigate('Contatos')}
+            onPress={() => this.props.navigation.navigate('Agenda')}
           />
         </View>
 

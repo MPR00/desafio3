@@ -53,7 +53,7 @@ class Home extends React.Component {
   render () {
     return (
       <NavigationContainer independent={true} theme={DarkTheme}>
-        <Stack.Navigator initialRouteName="Contatos">
+        <Stack.Navigator initialRouteName="Agenda">
 
           <Stack.Screen
             name="Agenda"
